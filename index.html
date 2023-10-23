@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Generator</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .movie {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .movie img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .search-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    #searchInput {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Movies</h1>
+  
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for a movie">
+    <button style="cursor: pointer;" onclick="searchMovies()">Search</button>
+  </div>
+
+  <label for="movieTypeSelect">Select Movie Type:</label>
+  <select id="movieTypeSelect" onchange="generateMovies()">
+  </select>
+
+  <label for="ratingFilter">Filter by Rating:</label>
+  <select id="ratingFilter" onchange="generateMovies()">
+  </select>
+
+  <div id="movieContainer"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
